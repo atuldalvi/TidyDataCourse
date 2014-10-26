@@ -2,6 +2,8 @@
 
 For the UCI HAR Dataset, following data frames are created by the run_analysis.R script
 
+All units are the same as used in the original data set
+
 ##tidyData
 Obtained by merging test and training data from UCI HAR Dataset. Only mean and standard deviation for each measurements are extracted into tidyData.
 Following are the variables present in this data frame
