@@ -60,6 +60,8 @@ trainingDataFull <- cbind(trainingSubjects, trainingActivity, trainingData)
 ## Merge test and training data
 tidyData <- rbind(testDataFull, trainingDataFull)
 
+## Get mean data by Subject and Activity
 meanData <- ddply(melt(tidyData, id.vars=c("Subject", "Activity")), .(Subject, Activity), summarise, MeanSamples=mean(value))
 
+## Write mean data to txt file
 write.table(meanData, file = "tidy-data-mean.txt", row.names = FALSE)
